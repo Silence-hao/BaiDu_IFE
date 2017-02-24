@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+<head>
+	<meta charset="UTF-8">
+	<title>loading</title>
+	<style>
+		*{margin:0;padding: 0;}
+		
+		@-webkit-keyframes xuanzhuan{
+			0%{transform:rotate(0);}
+			100%{transform:rotate(360deg);}
+			}
+
+		@-moz-keyframes xuanzhuan{
+			0%{transform:rotate(0);}
+			100%{transform:rotate(360deg);}
+			}
+		@keyframes xuanzhuan{
+			0%{transform:rotate(0);}
+			100%{transform:rotate(360deg);}
+			}
+
+		.loading{
+			width:80px;
+			height: 80px;
+			border-radius:50%;
+			background:#FB8BBD;
+			position:absolute;
+			top:calc(50% - 40px);
+			left:calc(50% - 40px);
+
+		}
+		
+		.in-l{
+			  position: absolute;
+			  width:40px;
+			  height:80px;
+			  left:0;
+			  overflow:hidden;
+		}
+		.in-r{
+			  position: absolute;
+			  width:40px;
+			  height:80px;
+			  left:50%;
+			  overflow:hidden;
+		}
+		.in-l >div,.in-r >div{
+			width:100%;
+			height:100%;
+			background: #FF298C;
+
+		}
+		.in-l >div{
+			border-radius:40px 0 0 40px;
+			animation: l_1 2s infinite linear;
+			transform-origin:100% 50%;
+		}
+		.in-r >div{
+			border-radius:0 40px 40px 0;
+			animation: r_1 2s infinite linear;
+			transform-origin:0% 50%;
+		}
+		
+		@keyframes l_1{
+		0%{transform:rotate(-180deg);}
+		25%{transform:rotate(0deg);}
+		50%{transform:rotate(0deg);}
+		75%{transform:rotate(180deg);}
+		100%{transform:rotate(180deg);}
+		}
+		@keyframes r_1{
+		0%{transform:rotate(-180deg);}
+		25%{transform:rotate(-180deg);}
+		50%{transform:rotate(0deg);}
+		75%{transform:rotate(0deg);}
+		100%{transform:rotate(180deg);}
+		}
+		
+		.out{
+
+			width: 100px;
+			height: 100px;
+			position:absolute;
+			border: 2px solid #FF298C;
+			border-radius:50%;
+			top:calc(50% - 52px);
+			left:calc(50% - 52px);
+
+		}
+		.out >div{
+			width:50px;
+			height: 50px;
+			position: absolute;
+			background:#fff;
+			left: -2px;
+			top: -2px;
+			animation: o_1 1s infinite linear;
+			transform-origin:52px 52px;
+		}
+
+		@keyframes o_1{
+		0%{transform: rotate(0deg);}
+		100%{transform: rotate(360deg);}
+		}
+		
+	</style>
+	
+
+</head>
+<body>
+	<div class="out"><div></div></div>
+	<div class="loading">
+		<div class="in-l"><div></div></div>
+		<div class="in-r"><div></div></div>
+	</div>
+
+
+</body>
+</html>
