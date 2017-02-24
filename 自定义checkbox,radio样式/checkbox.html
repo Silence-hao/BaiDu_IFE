@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义checkbox， radio样式</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		labe{display: inline-block;}
+		.box1 ,.box2{width:200px;height:40px;margin:20px auto;}
+		.box1 input ,.box2 input{display: none;}
+		
+		.box1 input[type="radio"]+label{width:16px;height:16px;cursor: pointer;display: inline-block;background:url('images/icon.png') no-repeat;background-position:0 0;}
+		.box1 input[type="radio"]:checked+label{background-position:-19px 0;}
+		.box1 input[type="checkbox"]+label{width:16px;height:16px;cursor: pointer;display: inline-block;background:url('images/icon.png') no-repeat;background-position:0 -22px;}
+		.box1 input[type="checkbox"]:checked+label{background-position:-19px -22px;}
+		
+		.box2 div{display:block;}
+		.box2 input[type="radio"]+label::after{content:"";width:16px;height:16px;cursor: pointer;display: inline-block;background:url('images/icon.png') no-repeat;background-position:0 0;}
+		.box2 input[type="radio"]:checked+label::after{content: "";background-position:-19px 0;}
+		.box2 input[type="checkbox"]+label::after{content: "";width:16px;height:16px;cursor: pointer;display: inline-block;background:url('images/icon.png') no-repeat;background-position:0 -22px;}
+		.box2 input[type="checkbox"]:checked+label::after{content:"";background-position:-19px -22px;}
+		
+		
+	</style>
+</head>
+	
+<body>
+		
+	<form action="" class="box1">
+	<h4>背景图</h4>
+		<input type="radio" id="ra_1" name="r01">
+		<label for="ra_1"></label>
+		<input type="radio" id="ra_2" name="r01">
+		<label for="ra_2"></label>
+	</form>
+	<form action="" class="box1">
+		<input type="checkbox" id="ch_1" name="ch01">
+		<label for="ch_1"></label>
+		<input type="checkbox" id="ch_2" name="ch01">
+		<label for="ch_2"></label>	
+	</form>
+	
+	<form action="" class="box2">
+	<h4>元素</h4>
+		<input type="radio" id="ra_3" name="r02">
+		<label for="ra_3"></label>
+		<input type="radio" id="ra_4" name="r02">
+		<label for="ra_4"></label>
+	</form>
+	<form action="" class="box1">
+		<div>
+			<input type="checkbox" id="ch_3" name="ch02">
+			<label for="ch_3"></label>
+		</div>
+		<div>
+			<input type="checkbox" id="ch_4" name="ch02">
+			<label for="ch_4"></label>	
+		</div>
+	</form>
+
+</body>
+</html>
