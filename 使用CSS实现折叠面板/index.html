@@ -29,21 +29,25 @@ form label{
 	line-height:40px;
 	font-size:20px; 
 }
+form label> p{
+	padding:2px 15px;
+}
 form label+ div{
 	width:100%;
-	height:0;
+	height:0px;
 	overflow: hidden;
-	transition: 0.3s linear;
-	top:1%;
-	
+	transition: 0.3s ease;	
+}
+form label+ div> p{
+	padding:10px 16px;
 }
 
 form input:checked + label + div{
-	height:200px;
-	transition: 0.3s linear;
+	height:130px;
+	transition: 0.3s ease;
 	border-radius:0 0 5px 5px;
 	border: 1px solid #DDDDDD;
-	border-top: none;
+	border-top:none;
 	box-shadow:0 1px 2px rgba(0, 0, 0, 0.3);
 }
 form input:checked + label{
@@ -56,32 +60,38 @@ form input:checked + label{
 
 	<form action="">
 		<input type="radio" id="rad_1" name="zd">
-		<label for="rad_1">标签</label>
+		<label for="rad_1"><p>目的</p></label>
 		<div>
-			<h2>任务目的</h2>
+			<p>
+			任务目的<br>
 			深入理解html中radio的特性<br>
 			深入理解CSS选择器以及伪元素的使用
+			</p>
 			</div>
 		
 
 	
 		<input type="radio" id="rad_2" name="zd">
-		<label for="rad_2">标签</label>
+		<label for="rad_2"><p>描述</p></label>
 		<div>
-			<h2>任务描述</h2>	
+			<p>
+			任务描述<br>
 			使用input的radio单选框特性结合CSS中的伪元素实现bootstrap中折叠面板(点击查看样例)，要求样式一致。
+			</p>
 		</div>
 		
 
 	
 		<input type="radio" id="rad_3" name="zd">
-		<label for="rad_3">标签</label>
+		<label for="rad_3"><p>事项</p></label>
 		<div>
-			<h2>任务注意事项</h2>
+			<p>
+			任务注意事项<br>
 			当其中一个面对折叠时，其他面板需要隐藏<br>
 			只能使用HTML，CSS，不允许使用JavaScript<br>
 			注意测试不同情况，尤其是极端情况下的效果<br>
 			有能力的同学在面板折叠或者展开时添加动画效果<br>
+			</p>
 		</div>
 		
 	</form>
